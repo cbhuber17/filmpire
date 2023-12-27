@@ -21,6 +21,7 @@ import { useTheme } from "@mui/material/styles";
 import { ColorModeContext } from "../../utils/ToggleColorMode";
 // import { setUser, userSelector } from "../../features/auth";
 // import { Sidebar, Search } from "..";
+import { Sidebar } from "..";
 // import { fetchToken, createSessionId, moviesApi } from "../../utils";
 import useStyles from "./styles";
 
@@ -120,7 +121,7 @@ const NavBar = () => {
               classes={{ paper: classes.drawerPaper }}
               ModalProps={{ keepMounted: true }}
             >
-              {/* <Sidebar setMobileOpen={setMobileOpen} /> */}
+              <Sidebar setMobileOpen={setMobileOpen} />
             </Drawer>
           ) : (
             <Drawer
@@ -128,7 +129,7 @@ const NavBar = () => {
               variant="permanent"
               open
             >
-              {/* <Sidebar setMobileOpen={setMobileOpen} /> */}
+              <Sidebar setMobileOpen={setMobileOpen} />
             </Drawer>
           )}
         </nav>

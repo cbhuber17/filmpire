@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import {
   Divider,
   List,
@@ -12,7 +12,7 @@ import {
 import { Link } from "react-router-dom";
 import { useTheme } from "@mui/styles";
 // import { useDispatch, useSelector } from "react-redux";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 
 // import { selectGenreOrCategory } from "../../features/currentGenreOrCategory";
 // import { useGetGenresQuery } from "../../services/TMDB";

@@ -5,7 +5,13 @@ import { Route, Routes } from "react-router-dom";
 import useStyles from "./styles";
 // import useAlan from "./Alan";
 
-// import { Actors, MovieInformation, Movies, NavBar, Profile } from ".";
+import {
+  // Actors,
+  // MovieInformation,
+  // Movies,
+  NavBar,
+  // Profile
+} from ".";
 
 const App = () => {
   const classes = useStyles();
@@ -16,7 +22,7 @@ const App = () => {
   return (
     <div className={classes.root}>
       <CssBaseline />
-      {/* <NavBar /> */}
+      <NavBar />
       <main className={classes.content}>
         <div className={classes.toolbar} />
         <Routes>

@@ -9,7 +9,7 @@ import { useSelector } from "react-redux";
 
 import { useGetMoviesQuery } from "../../services/TMDB";
 // import { FeaturedMovie, MovieList, Pagination } from "..";
-import MovieList from "..";
+import { MovieList } from "..";
 
 const Movies = () => {
   // const [page, setPage] = useState(1);

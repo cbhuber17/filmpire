@@ -20,8 +20,7 @@ import { useTheme } from "@mui/material/styles";
 
 import { ColorModeContext } from "../../utils/ToggleColorMode";
 // import { setUser, userSelector } from "../../features/auth";
-// import { Sidebar, Search } from "..";
-import { Sidebar } from "..";
+import { Sidebar, Search } from "..";
 // import { fetchToken, createSessionId, moviesApi } from "../../utils";
 import useStyles from "./styles";
 
@@ -84,7 +83,7 @@ const NavBar = () => {
           >
             {theme.palette.mode === "dark" ? <Brightness7 /> : <Brightness4 />}
           </IconButton>
-          {/* {!isMobile && <Search />} */}
+          {!isMobile && <Search />}
           <div>
             {/* {!isAuthenticated ? (
               <Button color="inherit" onClick={fetchToken}>
@@ -107,7 +106,7 @@ const NavBar = () => {
               </Button>
             )} */}
           </div>
-          {/* {isMobile && <Search />} */}
+          {isMobile && <Search />}
         </Toolbar>
       </AppBar>
       <div>

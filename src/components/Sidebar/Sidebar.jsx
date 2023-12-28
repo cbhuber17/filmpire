@@ -1,4 +1,4 @@
-// import { useEffect } from "react";
+import { useEffect } from "react";
 import {
   Divider,
   List,
@@ -6,16 +6,15 @@ import {
   ListItemText,
   ListSubheader,
   ListItemIcon,
-  // Box,
-  // CircularProgress,
+  Box,
+  CircularProgress,
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import { useTheme } from "@mui/styles";
-// import { useDispatch, useSelector } from "react-redux";
-// import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
-// import { selectGenreOrCategory } from "../../features/currentGenreOrCategory";
-// import { useGetGenresQuery } from "../../services/TMDB";
+import { selectGenreOrCategory } from "../../features/currentGenreOrCategory";
+import { useGetGenresQuery } from "../../services/TMDB";
 import useStyles from "./styles";
 import genreIcons from "../../assets/genres";
 
@@ -31,17 +30,17 @@ const blueLogo =
   "https://fontmeme.com/permalink/210930/6854ae5c7f76597cf8680e48a2c8a50a.png";
 
 const Sidebar = ({ setMobileOpen }) => {
-  // const { genreIdOrCategoryName } = useSelector(
-  //   (state) => state.currentGenreOrCategory
-  // );
+  const { genreIdOrCategoryName } = useSelector(
+    (state) => state.currentGenreOrCategory
+  );
   const theme = useTheme();
   const classes = useStyles();
-  // const { data, isFetching } = useGetGenresQuery();
-  // const dispatch = useDispatch();
+  const { data, isFetching } = useGetGenresQuery();
+  const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   setMobileOpen(false);
-  // }, [genreIdOrCategoryName]);
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [genreIdOrCategoryName]);
 
   return (
     <>
@@ -58,7 +57,7 @@ const Sidebar = ({ setMobileOpen }) => {
         {categories.map(({ label, value }) => (
           <Link key={value} className={classes.links} to="/">
             <ListItem
-              // onClick={() => dispatch(selectGenreOrCategory(value))}
+              onClick={() => dispatch(selectGenreOrCategory(value))}
               button
             >
               <ListItemIcon>
@@ -76,7 +75,7 @@ const Sidebar = ({ setMobileOpen }) => {
       <Divider />
       <List>
         <ListSubheader>Genres</ListSubheader>
-        {/* {isFetching ? (
+        {isFetching ? (
           <Box display="flex" justifyContent="center">
             <CircularProgress />
           </Box>
@@ -98,7 +97,7 @@ const Sidebar = ({ setMobileOpen }) => {
               </ListItem>
             </Link>
           ))
-        )} */}
+        )}
       </List>
     </>
   );

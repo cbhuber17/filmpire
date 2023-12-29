@@ -7,7 +7,7 @@ import useStyles from "./styles";
 
 import {
   // Actors,
-  // MovieInformation,
+  MovieInformation,
   Movies,
   NavBar,
   Profile,
@@ -26,7 +26,7 @@ const App = () => {
       <main className={classes.content}>
         <div className={classes.toolbar} />
         <Routes>
-          {/* <Route exact path="/movie/:id" element={<MovieInformation />} /> */}
+          <Route exact path="/movie/:id" element={<MovieInformation />} />
           {/* <Route exact path="/actors/:id" element={<Actors />} /> */}
           <Route path="/" element={<Movies />} />
           <Route exact path="/profile/:id" element={<Profile />} />

@@ -8,8 +8,7 @@ import {
   useGetActorsDetailsQuery,
   useGetMoviesByActorIdQuery,
 } from "../../services/TMDB";
-// import { MovieList, Pagination } from "..";
-import { MovieList } from "..";
+import { MovieList, Pagination } from "..";
 
 const Actors = () => {
   const { id } = useParams();
@@ -95,11 +94,11 @@ const Actors = () => {
           Movies
         </Typography>
         {movies && <MovieList movies={movies} numberOfMovies={12} />}
-        {/* <Pagination
+        <Pagination
           currentPage={page}
           setPage={setPage}
           totalPages={movies?.total_pages}
-        /> */}
+        />
       </Box>
     </>
   );

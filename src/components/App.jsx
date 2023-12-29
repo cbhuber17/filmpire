@@ -10,7 +10,7 @@ import {
   // MovieInformation,
   Movies,
   NavBar,
-  // Profile
+  Profile,
 } from ".";
 
 const App = () => {
@@ -29,7 +29,7 @@ const App = () => {
           {/* <Route exact path="/movie/:id" element={<MovieInformation />} /> */}
           {/* <Route exact path="/actors/:id" element={<Actors />} /> */}
           <Route path="/" element={<Movies />} />
-          {/* <Route exact path="/profile/:id" element={<Profile />} /> */}
+          <Route exact path="/profile/:id" element={<Profile />} />
         </Routes>
       </main>
       <div ref={alanBtnContainer} />

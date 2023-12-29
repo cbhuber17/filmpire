@@ -89,8 +89,6 @@ const MovieInformation = () => {
     setIsMovieFavorited((prev) => !prev);
   };
 
-  console.log({ isMovieWatchlisted });
-
   const addToWatchlist = async () => {
     await axios.post(
       `https://api.themoviedb.org/3/account/${user.id}/watchlist?api_key=${

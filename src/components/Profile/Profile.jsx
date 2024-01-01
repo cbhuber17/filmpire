@@ -5,7 +5,7 @@ import { ExitToApp } from "@mui/icons-material";
 
 import { useGetListQuery } from "../../services/TMDB";
 import { userSelector } from "../../features/auth";
-// import { RatedCards } from "..";
+import { RatedCards } from "..";
 
 const Profile = () => {
   const { user } = useSelector(userSelector);
@@ -49,11 +49,12 @@ const Profile = () => {
         <Typography variant="h5">
           Add favorites or watchlist some movies to see them here!
         </Typography>
-      ) : // <Box>
-      //   <RatedCards title="Favorite Movies" data={favoriteMovies} />
-      //   <RatedCards title="Watchlist" data={watchlistMovies} />
-      // </Box>
-      null}
+      ) : (
+        <Box>
+          <RatedCards title="Favorite Movies" data={favoriteMovies} />
+          <RatedCards title="Watchlist" data={watchlistMovies} />
+        </Box>
+      )}
     </Box>
   );
 };

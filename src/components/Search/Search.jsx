@@ -19,7 +19,8 @@ const Search = () => {
     }
   };
 
-  if (location.pathname !== "/") return null;
+  if (location.pathname !== "/" || location.pathname !== "/filmpire")
+    return null;
 
   return (
     <div className={classes.searchContainer}>

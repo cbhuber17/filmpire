@@ -115,7 +115,7 @@ const MovieInformation = () => {
   if (error) {
     return (
       <Box display="flex" justifyContent="center" alignItems="center">
-        <Link to="/">Something has gone wrong - Go back</Link>
+        <Link to="/filmpire">Something has gone wrong - Go back</Link>
       </Box>
     );
   }
@@ -161,7 +161,7 @@ const MovieInformation = () => {
             <Link
               key={genre.name}
               className={classes.links}
-              to="/"
+              to="/filmpire"
               onClick={() => dispatch(selectGenreOrCategory(genre.id))}
             >
               <img
@@ -267,7 +267,7 @@ const MovieInformation = () => {
                   <Typography
                     style={{ textDecoration: "none" }}
                     component={Link}
-                    to="/"
+                    to="/filmpire"
                     color="inherit"
                     variant="subtitle2"
                   >

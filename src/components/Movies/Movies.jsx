@@ -8,8 +8,7 @@ import {
 import { useSelector } from "react-redux";
 
 import { useGetMoviesQuery } from "../../services/TMDB";
-// import { FeaturedMovie, MovieList, Pagination } from "..";
-import { MovieList, Pagination } from "..";
+import { FeaturedMovie, MovieList, Pagination } from "..";
 
 const Movies = () => {
   const [page, setPage] = useState(1);
@@ -45,11 +44,11 @@ const Movies = () => {
     );
   }
 
-  if (error) return "An error has occured.";
+  if (error) return "An error has occurred.";
 
   return (
     <div>
-      {/* <FeaturedMovie movie={data.results[0]} /> */}
+      <FeaturedMovie movie={data.results[0]} />
       <MovieList movies={data} numberOfMovies={numberOfMovies} excludeFirst />
       <Pagination
         currentPage={page}

@@ -12,3 +12,4 @@
 - Pagination styling
 - Larger grid gap among movies, overall project styling
 - Alan jsx switch statement
+- Switch to HashRouter
